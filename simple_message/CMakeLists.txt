@@ -35,6 +35,8 @@ set(SRC_FILES src/byte_array.cpp
 	src/joint_feedback.cpp
 	src/joint_traj_pt.cpp
 	src/joint_traj_pt_full.cpp
+        src/joint_traj_pt_data.cpp
+	src/joint_traj_pt_full_ex.cpp
 	src/joint_traj.cpp
 	src/robot_status.cpp
 
@@ -42,6 +44,7 @@ set(SRC_FILES src/byte_array.cpp
 	src/messages/joint_feedback_message.cpp
 	src/messages/joint_traj_pt_message.cpp
 	src/messages/joint_traj_pt_full_message.cpp
+	src/messages/joint_traj_pt_full_ex_message.cpp
 	src/messages/robot_status_message.cpp
 
 	src/simple_comms_fault_handler.cpp)
