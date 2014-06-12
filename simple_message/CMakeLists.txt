@@ -42,6 +42,7 @@ set(SRC_FILES src/byte_array.cpp
 
 	src/messages/joint_message.cpp
 	src/messages/joint_feedback_message.cpp
+        src/messages/joint_feedback_ex_message.cpp
 	src/messages/joint_traj_pt_message.cpp
 	src/messages/joint_traj_pt_full_message.cpp
 	src/messages/joint_traj_pt_full_ex_message.cpp

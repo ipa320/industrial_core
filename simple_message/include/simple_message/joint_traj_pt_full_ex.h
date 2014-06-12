@@ -78,7 +78,7 @@ public:
    */
   void init(industrial::shared_types::shared_int num_groups,
             industrial::shared_types::shared_int sequence,
-            joint_traj_pt_data::JointTrajPtData multi_joint_traj);
+            joint_traj_pt_data::JointTrajPtData *multi_joint_traj);
 
   /**
    * \brief Sets robot_id.
@@ -102,9 +102,9 @@ public:
     return this->num_groups_;
   }
 
-  void setMultiJointTrajPtData(joint_traj_pt_data::JointTrajPtData multiJointData)
+  void setMultiJointTrajPtData(joint_traj_pt_data::JointTrajPtData *multiJointData)
   {
-      this->multi_joint_traj_pt_data_ = multiJointData;
+        this->multi_joint_traj_pt_data_ = multiJointData;
   }
 
   /**
@@ -149,12 +149,12 @@ public:
   unsigned int byteLength()
   {
     return 3*sizeof(industrial::shared_types::shared_int) + sizeof(industrial::shared_types::shared_real)
-        + 3*this->multi_joint_traj_pt_data_.byteLength();
+        + 3*(*this->multi_joint_traj_pt_data_).byteLength();
   }
 
 private:
 
-  joint_traj_pt_data::JointTrajPtData multi_joint_traj_pt_data_;
+  joint_traj_pt_data::JointTrajPtData *multi_joint_traj_pt_data_;
   /**
    * \brief robot group # (0-based) for controllers that support multiple axis-groups
    */

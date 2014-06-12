@@ -34,7 +34,7 @@ void JointTrajPtFullEx::init()
 
 void JointTrajPtFullEx::init(industrial::shared_types::shared_int num_groups,
           industrial::shared_types::shared_int sequence,
-          joint_traj_pt_data::JointTrajPtData multi_joint_traj)
+          joint_traj_pt_data::JointTrajPtData *multi_joint_traj)
 {
   this->setNumGroups(num_groups);
   this->setSequence(sequence);

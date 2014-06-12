@@ -125,7 +125,7 @@ bool SmplMsgConnection::receiveMsg(SimpleMessage & message)
 
 
 bool SmplMsgConnection::sendAndReceiveMsg(SimpleMessage & send, SimpleMessage & recv, bool verbose)
-{	
+{
   bool rtn = false;
   rtn = this->sendMsg(send);
   if (rtn)
