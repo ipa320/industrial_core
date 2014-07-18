@@ -142,6 +142,7 @@ void MessageManager::spinOnce()
   if (this->getConnection()->receiveMsg(msg))
   {
     LOG_COMM("Message received");
+
     handler = this->getHandler(msg.getMessageType());
 
     if (NULL != handler)
@@ -259,6 +260,7 @@ int MessageManager::getHandlerIdx(int msg_type)
   for (unsigned int i = 0; i < this->getMaxNumHandlers(); i++)
   {
     temp = this->handlers_[i];
+
     if (NULL == temp) break;  // end of handler-list
 
     if (temp->getMsgType() == msg_type)

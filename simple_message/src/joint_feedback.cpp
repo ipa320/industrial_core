@@ -102,6 +102,8 @@ bool JointFeedback::operator==(JointFeedback &rhs)
 
 bool JointFeedback::load(industrial::byte_array::ByteArray *buffer)
 {
+
+
   LOG_COMM("Executing joint feedback load");
 
   if (!buffer->load(this->robot_id_))
